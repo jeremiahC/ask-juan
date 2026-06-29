@@ -7,12 +7,61 @@ navLinks?.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
+// Domain dropdown in nav
+function renderNavDomainMenu() {
+  const menu = document.getElementById('nav-domain-menu');
+  const toggle = document.querySelector('.nav-dropdown-toggle');
+  if (!menu || !toggle) return;
+
+  menu.innerHTML = liveDomains.map(d => `
+    <li class="nav-dropdown-item${d.id === activeDomain ? ' active' : ''}" data-domain="${d.id}">
+      <span class="nav-dropdown-item-icon">${d.icon}</span>
+      <span>${d.label}</span>
+      <span class="nav-dropdown-item-count">${TEAM.filter(t => t.bizDomain === d.id).length}</span>
+    </li>`).join('');
+
+  menu.querySelectorAll('.nav-dropdown-item').forEach(item => {
+    item.addEventListener('click', () => {
+      activeDomain = item.dataset.domain;
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      renderNavDomainMenu();
+      renderTeamGrid();
+      document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+}
+
+const navDropdownToggle = document.querySelector('.nav-dropdown-toggle');
+navDropdownToggle?.addEventListener('click', e => {
+  const menu = document.getElementById('nav-domain-menu');
+  const isOpen = menu.classList.toggle('open');
+  navDropdownToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.nav-dropdown')) {
+    document.getElementById('nav-domain-menu')?.classList.remove('open');
+    navDropdownToggle?.setAttribute('aria-expanded', 'false');
+  }
+});
+
 const fadeObserver = new IntersectionObserver(
   entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
   { threshold: 0.12 }
 );
-document.querySelectorAll('.skill-card, .step, .section-header, .cta-card, .juan-card')
+document.querySelectorAll('.section-header, .cta-card, .terminal-demo')
   .forEach(el => { el.classList.add('fade-up'); fadeObserver.observe(el); });
+
+// Terminal demo tab switching
+document.querySelectorAll('.term-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.term-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.terminal-example').forEach(e => e.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(`term-ex-${tab.dataset.ex}`)?.classList.add('active');
+  });
+});
 
 window.addEventListener('scroll', () => {
   document.querySelector('.nav')?.style.setProperty(
@@ -20,14 +69,33 @@ window.addEventListener('scroll', () => {
   );
 });
 
+// ===== DOMAINS GRID =====
+
+function renderDomainsGrid() {
+  const grid = document.getElementById('domains-grid');
+  if (!grid) return;
+  grid.innerHTML = DOMAINS.map(d => {
+    const count = TEAM.filter(t => t.bizDomain === d.id).length;
+    return `
+      <div class="domain-card${d.comingSoon ? ' domain-card-soon' : ''}">
+        ${d.comingSoon ? '<span class="domain-card-soon-badge">Coming Soon</span>' : ''}
+        <div class="domain-card-icon">${d.icon}</div>
+        <div class="domain-card-label">${d.label}</div>
+        <p class="domain-card-desc">${d.desc}</p>
+        ${!d.comingSoon ? `<div class="domain-card-count"><span class="domain-card-count-num">${count}</span> specialist agents</div>` : ''}
+      </div>`;
+  }).join('');
+}
+
 // ===== DOMAIN TABS + TEAM GRID =====
 
-let activeDomain = DOMAINS[0].id;
+const liveDomains = DOMAINS.filter(d => !d.comingSoon);
+let activeDomain = liveDomains[0].id;
 
 function renderDomainTabs() {
   const tabsEl = document.getElementById('domain-tabs');
   if (!tabsEl) return;
-  tabsEl.innerHTML = DOMAINS.map(d => `
+  tabsEl.innerHTML = liveDomains.map(d => `
     <button class="domain-tab${d.id === activeDomain ? ' active' : ''}" data-domain="${d.id}">
       <span class="domain-tab-icon">${d.icon}</span>
       <span class="domain-tab-label">${d.label}</span>
@@ -64,8 +132,10 @@ function renderTeamGrid() {
   });
 }
 
+renderDomainsGrid();
 renderDomainTabs();
 renderTeamGrid();
+renderNavDomainMenu();
 
 // ===== HASH ROUTER =====
 

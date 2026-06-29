@@ -873,8 +873,22 @@ const DOMAINS = [
     label: 'Software Development',
     icon: '💻',
     desc: 'Full-cycle software team: PM, engineering, design, frontend, backend, and QA.',
+    comingSoon: false,
   },
-  // Future domains: { id: 'marketing', label: 'Marketing', icon: '📣', desc: '...' },
+  {
+    id: 'sales',
+    label: 'Sales',
+    icon: '📈',
+    desc: 'Sales pipeline, client proposals, follow-ups, and deal tracking — handled.',
+    comingSoon: true,
+  },
+  {
+    id: 'marketing',
+    label: 'Marketing',
+    icon: '📣',
+    desc: 'Content strategy, campaigns, copy, and growth — driven by your business goals.',
+    comingSoon: true,
+  },
 ];
 
 // Team metadata — bizDomain links each agent to a DOMAINS entry
