@@ -1484,7 +1484,7 @@ body {
 
 .out-preview {
   border-top: 1px solid var(--border);
-  background: rgba(0,0,0,0.3);
+  background: #1e1e2e;
 }
 
 .out-preview-bar {
