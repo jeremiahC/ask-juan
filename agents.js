@@ -253,9 +253,9 @@ discuss before I finalize the plan.
 
 Building the tech plan now...`,
     skills: [
-      { icon: '🏗️', name: 'Technical Planner', desc: 'Architecture + data models + API contracts per PRD.' },
-      { icon: '🔍', name: 'Arch Reviewer',     desc: 'Senior perspective on design decisions and tech debt.' },
-      { icon: '🔒', name: 'Security Auditor',  desc: 'Auth, PII, file uploads, and external API audit.' },
+      { icon: '🏗️', name: 'Technical Planner', desc: 'Architecture + data models + API contracts per PRD.', cmd: '/sw:carlo-lead-plan' },
+      { icon: '🔍', name: 'Arch Reviewer',     desc: 'Senior perspective on design decisions and tech debt.', cmd: '/sw:carlo-lead-review' },
+      { icon: '🔒', name: 'Security Auditor',  desc: 'Auth, PII, file uploads, and external API audit.', cmd: '/sw:carlo-eng-security' },
     ],
   },
 
@@ -351,8 +351,8 @@ Big decisions I'm making:
 
 Producing wireframes now, then handing to Nico with specs...`,
     skills: [
-      { icon: '✏️', name: 'UI Designer',     desc: 'Wireframes and visual designs from user stories.' },
-      { icon: '📐', name: 'Spec Generator', desc: 'Pixel-precise component specs for frontend implementation.' },
+      { icon: '✏️', name: 'UI Designer',     desc: 'Wireframes and visual designs from user stories.', cmd: '/sw:mika-design-ui' },
+      { icon: '📐', name: 'Spec Generator', desc: 'Pixel-precise component specs for frontend implementation.', cmd: '/sw:mika-design-specs' },
     ],
   },
 
@@ -448,9 +448,9 @@ Key spec notes I'm following:
 
 Building ProductListItem.tsx...`,
     skills: [
-      { icon: '🧱', name: 'Component Builder', desc: 'UI components from design specs — typed and accessible.' },
-      { icon: '📱', name: 'Page Assembler',    desc: 'Composes components into full screens.' },
-      { icon: '🔍', name: 'Frontend Reviewer', desc: 'Visual correctness, a11y, and spec compliance review.' },
+      { icon: '🧱', name: 'Component Builder', desc: 'UI components from design specs — typed and accessible.', cmd: '/sw:nico-fe-build' },
+      { icon: '📱', name: 'Page Assembler',    desc: 'Composes components into full screens.', cmd: '/sw:nico-fe-build' },
+      { icon: '🔍', name: 'Frontend Reviewer', desc: 'Visual correctness, a11y, and spec compliance review.', cmd: '/sw:nico-fe-review' },
     ],
   },
 
@@ -548,9 +548,9 @@ Two things I'm flagging before I build:
 
 Building the endpoint and migration now...`,
     skills: [
-      { icon: '📡', name: 'API Builder',      desc: 'REST endpoints per Carlo\'s contracts with error handling.' },
-      { icon: '🗄️', name: 'DB Designer',     desc: 'Schema design, relations, indexes, and migrations.' },
-      { icon: '⚙️', name: 'Logic Implementer', desc: 'Business rules, validation, and auth guards.' },
+      { icon: '📡', name: 'API Builder',       desc: 'REST endpoints per Carlo\'s contracts with error handling.', cmd: '/sw:rex-be-build' },
+      { icon: '🗄️', name: 'DB Designer',      desc: 'Schema design, relations, indexes, and migrations.', cmd: '/sw:rex-be-db' },
+      { icon: '⚙️', name: 'Logic Implementer', desc: 'Business rules, validation, and auth guards.', cmd: '/sw:rex-be-build' },
     ],
   },
 
@@ -638,9 +638,9 @@ but the actual device-offline scenario needs Bea's manual pass.
 
 Building the QA plan and assigning work now...`,
     skills: [
-      { icon: '🗺️', name: 'QA Planner',       desc: 'Test strategy, coverage targets, risk areas.' },
-      { icon: '🎯', name: 'QA Orchestrator',   desc: 'Coordinates Lara, Dino, and Bea into one QA run.' },
-      { icon: '✅', name: 'Sign-off Authority', desc: 'Synthesizes all results into a go/no-go decision.' },
+      { icon: '🗺️', name: 'QA Planner',       desc: 'Test strategy, coverage targets, risk areas.', cmd: '/sw:tina-qa-plan' },
+      { icon: '🎯', name: 'QA Orchestrator',   desc: 'Coordinates Lara, Dino, and Bea into one QA run.', cmd: '/sw:tina-qa-run' },
+      { icon: '✅', name: 'Sign-off Authority', desc: 'Synthesizes all results into a go/no-go decision.', cmd: '/sw:tina-qa-run' },
     ],
   },
 
@@ -706,8 +706,8 @@ airplane mode scenario reliably.
 
 Writing 9 test cases total (5 for US-01, 4 for US-02)...`,
     skills: [
-      { icon: '✍️', name: 'TC Writer',       desc: 'Step-by-step test cases from acceptance criteria.' },
-      { icon: '🔍', name: 'Edge Case Finder', desc: 'BVA, empty states, and error path coverage.' },
+      { icon: '✍️', name: 'TC Writer',       desc: 'Step-by-step test cases from acceptance criteria.', cmd: '/sw:lara-tc-write' },
+      { icon: '🔍', name: 'Edge Case Finder', desc: 'BVA, empty states, and error path coverage.', cmd: '/sw:lara-tc-write' },
     ],
   },
 
@@ -769,8 +769,8 @@ Flagging this to Tina — Bea should cover it manually.
 
 Full report saved to plans/reports/dino-test-run-...`,
     skills: [
-      { icon: '🤖', name: 'Test Runner',      desc: 'Executes unit, integration, and e2e test suites.' },
-      { icon: '📊', name: 'Coverage Reporter', desc: 'Gap analysis and recommendations for Tina.' },
+      { icon: '🤖', name: 'Test Runner',      desc: 'Executes unit, integration, and e2e test suites.', cmd: '/sw:dino-test-run' },
+      { icon: '📊', name: 'Coverage Reporter', desc: 'Gap analysis and recommendations for Tina.', cmd: '/sw:dino-test-run' },
     ],
   },
 
@@ -838,9 +838,9 @@ products. Must fix before merge.
 
 Full review incoming...`,
     skills: [
-      { icon: '🐛', name: 'Bug Hunter',       desc: 'Logic errors, race conditions, and edge case detection.' },
-      { icon: '🔒', name: 'Security Reviewer', desc: 'Auth correctness, input handling, data exposure.' },
-      { icon: '🏗️', name: 'Arch Guard',       desc: 'Detects drift from Carlo\'s intended architecture.' },
+      { icon: '🐛', name: 'Bug Hunter',       desc: 'Logic errors, race conditions, and edge case detection.', cmd: '/sw:gab-review-code' },
+      { icon: '🔒', name: 'Security Reviewer', desc: 'Auth correctness, input handling, data exposure.', cmd: '/sw:gab-review-code' },
+      { icon: '🏗️', name: 'Arch Guard',       desc: 'Detects drift from Carlo\'s intended architecture.', cmd: '/sw:gab-review-code' },
     ],
   },
 
@@ -935,10 +935,10 @@ B. "Full stock management MVP" (US-01 + US-02 + US-03 = 18 pts — fits capacity
 
 Recommending Goal B. Preparing planning agenda...`,
     skills: [
-      { icon: '🗓️', name: 'Standup Facilitator', desc: 'Daily standups with blocker detection and async minutes.' },
-      { icon: '📋', name: 'Sprint Planner',       desc: 'Backlog-driven planning with velocity and capacity.' },
-      { icon: '🔁', name: 'Retro Facilitator',    desc: 'Start/Stop/Continue with prioritized team action items.' },
-      { icon: '🎯', name: 'Review Facilitator',   desc: 'Demo agenda, stakeholder feedback, story acceptance.' },
+      { icon: '🗓️', name: 'Standup Facilitator', desc: 'Daily standups with blocker detection and async minutes.', cmd: '/sw:scrum-standup' },
+      { icon: '📋', name: 'Sprint Planner',       desc: 'Backlog-driven planning with velocity and capacity.', cmd: '/sw:scrum-sprint-plan' },
+      { icon: '🔁', name: 'Retro Facilitator',    desc: 'Start/Stop/Continue with prioritized team action items.', cmd: '/sw:scrum-sprint-retro' },
+      { icon: '🎯', name: 'Review Facilitator',   desc: 'Demo agenda, stakeholder feedback, story acceptance.', cmd: '/sw:scrum-sprint-review' },
     ],
   },
 
@@ -1005,9 +1005,9 @@ isn't tech-savvy — big concern is the offline sync UX.
 Does the app clearly communicate that entries are queued?
 That's the thing users will panic about. Checking now...`,
     skills: [
-      { icon: '🧪', name: 'Manual Tester',    desc: 'User flow verification against acceptance criteria.' },
-      { icon: '👁️', name: 'UX Observer',      desc: 'Error messages, edge states, and user confusion points.' },
-      { icon: '📋', name: 'Bug Reporter',     desc: 'Structured bug reports with reproduction steps.' },
+      { icon: '🧪', name: 'Manual Tester',    desc: 'User flow verification against acceptance criteria.', cmd: '/sw:bea-qa-review' },
+      { icon: '👁️', name: 'UX Observer',      desc: 'Error messages, edge states, and user confusion points.', cmd: '/sw:bea-qa-review' },
+      { icon: '📋', name: 'Bug Reporter',     desc: 'Structured bug reports with reproduction steps.', cmd: '/sw:bea-qa-review' },
     ],
   },
 };
