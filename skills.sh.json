@@ -13,8 +13,10 @@
     },
     {
       "title": "Product Management",
-      "description": "Rica the PM — charters, PRDs, sprint timelines, and stakeholder meeting minutes.",
+      "description": "Rica the PM — upstream proposals, charters, PRDs, sprint timelines, and stakeholder meeting minutes.",
       "skills": [
+        "rica-pm-proposal-prep",
+        "rica-pm-proposal-draft",
         "rica-pm-charter",
         "rica-pm-prd",
         "rica-pm-timeline",

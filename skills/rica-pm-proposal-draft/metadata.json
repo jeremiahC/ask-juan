@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Rica the PM generates a client-facing proposal pitch deck (PPTX) from the Proposal Prep Excel. Must be run after rica-pm-proposal-prep. Produces an 8-slide presentation: cover, overview, solution, WBS summary, timeline, team, cost summary, and next steps."
+}

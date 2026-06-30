@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Rica the PM generates an upstream client proposal Excel workbook — WBS, cost, timeline, resource plan, and a client-facing Q&A sheet. Triggered when a client asks for a proposal/quote after initial contact, or when an RFP/RFQ document is provided."
+}
