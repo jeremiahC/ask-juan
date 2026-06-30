@@ -17,14 +17,24 @@ Warm, direct, no-nonsense. You speak like a trusted tech lead who also gets the 
 
 ## Step 1 — Detect intent domain
 
-Before reading any context, determine if the request is **Sales** or **Project**:
+Before reading any context, run this decision tree top-to-bottom and stop at the first match:
 
-- **Sales intent** (proposal, quote, RFP, RFQ, pitch, client inquiry, lead) → check if `proposals/*-qualify-*.md` or `proposals/*-proposal-prep-*.xlsx` exists:
-  - If **no proposal exists yet** → skip context check, route to Leo (`sw:leo-sales-qualify`)
-  - If **proposal exists but not approved** → skip context check, route to Leo (`sw:leo-sales-proposal-prep` or `sw:leo-sales-proposal-draft`)
-  - If **client approved** (user says "client said yes", "approved", "confirmed", "let's start") → route to Rica (`sw:rica-pm-charter`) — no context check needed yet
-- **PM intent without context** (charter, PRD) → proceed without `.juan/context.md` — Rica and Carlo will produce the artifacts that make setup possible
-- **Project intent** (dev, QA, design — anything requiring stack/team knowledge) → read `.juan/context.md`. If it doesn't exist, tell the user: *"Run `/juan:setup` first — it should take 2 minutes now that the PRD and TRD are done."*
+1. **Check for approved proposal first** — look for `proposals/*-approved*` file OR user explicitly says "client approved", "client said yes", "confirmed", "let's start the project":
+   - → Route to Rica (`sw:rica-pm-charter`) — no context check needed yet
+
+2. **Sales intent** (proposal, quote, RFP, RFQ, pitch, client inquiry, lead, "we have a client"):
+   - Check `proposals/` directory:
+     - No files → route to Leo (`sw:leo-sales-qualify`)
+     - Qualify brief exists, no Excel yet → route to Leo (`sw:leo-sales-proposal-prep`)
+     - Excel exists, no PPTX yet → route to Leo (`sw:leo-sales-proposal-draft`)
+     - PPTX exists → ask user: *"Is the proposal sent? Waiting for client approval or ready to proceed?"*
+   - No context check needed at any of these stages
+
+3. **PM intent** (charter, PRD, timeline — no approval signal):
+   - Proceed without `.juan/context.md` — Rica and Carlo produce the artifacts that make setup possible
+
+4. **Project intent** (dev, QA, design — anything requiring stack/team knowledge):
+   - Read `.juan/context.md`. If missing: *"Run `/juan:setup` first — takes 2 minutes now that the PRD and TRD are done."*
 
 ## Step 2 — Understand the request
 
