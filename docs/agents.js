@@ -796,6 +796,104 @@ Full review incoming...`,
     ],
   },
 
+  // ── SCRUM MASTER ─────────────────────────────────────────────────────────
+  'scrum': {
+    id: 'scrum', icon: '🔄', name: 'Scrum', emoji: '🧑‍✈️',
+    role: 'Scrum Master', domain: 'Agile Ceremonies',
+    model: 'claude-sonnet-4-6',
+    skills_prefix: 'sw:scrum-',
+    tagline: 'Standups, sprint planning, retros, and reviews — Scrum keeps the team moving.',
+    desc: 'Scrum facilitates all agile ceremonies: daily standups, sprint planning (with real backlog data), sprint retrospectives, and sprint reviews. He pulls live data from your PM tool (Backlog, Jira, Linear) and writes structured minutes for every session.',
+    tags: ['Standup', 'Sprint Planning', 'Retrospective', 'Sprint Review', 'Sonnet 4.6'],
+    workflow: [
+      { icon: '📊', label: 'Pull PM Data',      sub: 'Live backlog, velocity, capacity from Backlog/Jira' },
+      { icon: '🗓️', label: 'Facilitate Standup', sub: 'Daily updates, blocker detection, minutes' },
+      { icon: '📋', label: 'Sprint Planning',    sub: 'Goal candidates, story selection, capacity check' },
+      { icon: '🔁', label: 'Sprint Retro',       sub: 'Start/Stop/Continue, top 3 action items' },
+      { icon: '🎯', label: 'Sprint Review',      sub: 'Demo agenda, stakeholder feedback, accepted stories' },
+    ],
+    outputs: [
+      {
+        icon: '📋', title: 'Sprint Planning Output',
+        desc: 'Sprint goal, committed stories, capacity breakdown, and planning minutes.',
+        preview: `# Sprint Planning — Sprint 6 · 2026-06-30
+**Attendees:** Rica, Carlo, Nico, Rex, Tina
+
+## Sprint Goal
+Enable store owners to log restocks offline and sync on reconnect.
+
+## Committed Stories
+| Story | Points | Owner |
+|-------|--------|-------|
+| US-01 Log restock | 8 | Nico + Rex |
+| US-02 Low-stock alert | 5 | Rex |
+| US-03 Dashboard view | 5 | Nico |
+**Total: 18 pts** (capacity: 20 pts)
+
+## Risks
+- US-01 offline sync: no prior art in codebase — Carlo to spike Day 1
+
+## Action Items
+- [ ] Carlo: spike offline sync approach by Jul 2`,
+      },
+      {
+        icon: '🔁', title: 'Sprint Retrospective',
+        desc: 'Start/Stop/Continue themes with prioritized action items.',
+        preview: `# Sprint Retro — Sprint 5 · 2026-06-28
+**Attendees:** Full team
+
+## Sprint Summary
+Committed: 21 pts | Completed: 18 pts (86%)
+Carried over: US-05 Export Report (3 pts)
+
+## What Went Well
+- Pair programming on the sync engine cut bugs by half
+- Mika's specs were pixel-precise — Nico had zero back-and-forth
+
+## What Needs Improvement
+- PR reviews taking 2+ days — blocking Nico and Rex
+- No clear owner for E2E test flakiness
+
+## Action Items
+- [ ] Gab: review PRs within 1 business day — Sprint 6
+- [ ] Dino: fix TC-offline-sync flakiness by Jul 5
+- [ ] Team: try async standup on Mondays`,
+      },
+    ],
+    promptTrigger: '/sw:scrum-sprint-plan',
+    samplePrompt: `We're starting Sprint 6 tomorrow.
+
+PM tool: Backlog (project key: INVENTORY)
+Team: Nico, Rex, Rica, Carlo, Tina
+Sprint length: 2 weeks
+Last sprint velocity: 18 pts
+
+Can you prep the sprint planning session?`,
+    sampleResponse: `On it. Pulling backlog and velocity data from Backlog.
+
+Fetching INVENTORY backlog... ✓ (24 open stories)
+Last 2 sprint velocity: 18, 21 pts → avg 19.5 pts
+Capacity this sprint: ~18 pts (one day off for Rex on Jul 7)
+
+Top backlog candidates by priority:
+1. US-01 Log restock (8 pts) — HIGH
+2. US-02 Low-stock alert (5 pts) — HIGH
+3. US-03 Dashboard view (5 pts) — MEDIUM
+...
+
+Sprint goal candidates:
+A. "Offline-first stock logging" (US-01 + US-02 = 13 pts — room for more)
+B. "Full stock management MVP" (US-01 + US-02 + US-03 = 18 pts — fits capacity)
+
+Recommending Goal B. Preparing planning agenda...`,
+    skills: [
+      { icon: '🗓️', name: 'Standup Facilitator', desc: 'Daily standups with blocker detection and async minutes.' },
+      { icon: '📋', name: 'Sprint Planner',       desc: 'Backlog-driven planning with velocity and capacity.' },
+      { icon: '🔁', name: 'Retro Facilitator',    desc: 'Start/Stop/Continue with prioritized team action items.' },
+      { icon: '🎯', name: 'Review Facilitator',   desc: 'Demo agenda, stakeholder feedback, story acceptance.' },
+    ],
+  },
+
   // ── BEA ──────────────────────────────────────────────────────────────────
   'bea': {
     id: 'bea', icon: '✅', name: 'Bea', emoji: '👩‍💼',
@@ -893,14 +991,15 @@ const DOMAINS = [
 
 // Team metadata — bizDomain links each agent to a DOMAINS entry
 const TEAM = [
-  { id: 'rica',  emoji: '👩‍💼', domain: 'Product',      color: '#6366f1', bizDomain: 'software-development' },
-  { id: 'carlo', emoji: '👨‍💻', domain: 'Engineering',  color: '#f97316', bizDomain: 'software-development' },
-  { id: 'mika',  emoji: '👩‍🎨', domain: 'Design',       color: '#ec4899', bizDomain: 'software-development' },
-  { id: 'nico',  emoji: '👨‍🎨', domain: 'Frontend',     color: '#06b6d4', bizDomain: 'software-development' },
-  { id: 'rex',   emoji: '👨‍💻', domain: 'Backend',      color: '#10b981', bizDomain: 'software-development' },
-  { id: 'tina',  emoji: '👩‍🔬', domain: 'QA Lead',      color: '#8b5cf6', bizDomain: 'software-development' },
-  { id: 'lara',  emoji: '👩‍💻', domain: 'Test Writing', color: '#f59e0b', bizDomain: 'software-development' },
-  { id: 'dino',  emoji: '👨‍🔬', domain: 'Test Exec',    color: '#64748b', bizDomain: 'software-development' },
-  { id: 'gab',   emoji: '👨‍💻', domain: 'Code Review',  color: '#ef4444', bizDomain: 'software-development' },
-  { id: 'bea',   emoji: '👩‍💼', domain: 'Acceptance',   color: '#14b8a6', bizDomain: 'software-development' },
+  { id: 'rica',  emoji: '👩‍💼', domain: 'Product',       color: '#6366f1', bizDomain: 'software-development' },
+  { id: 'carlo', emoji: '👨‍💻', domain: 'Engineering',   color: '#f97316', bizDomain: 'software-development' },
+  { id: 'scrum', emoji: '🧑‍✈️', domain: 'Scrum Master',  color: '#0ea5e9', bizDomain: 'software-development' },
+  { id: 'mika',  emoji: '👩‍🎨', domain: 'Design',        color: '#ec4899', bizDomain: 'software-development' },
+  { id: 'nico',  emoji: '👨‍🎨', domain: 'Frontend',      color: '#06b6d4', bizDomain: 'software-development' },
+  { id: 'rex',   emoji: '👨‍💻', domain: 'Backend',       color: '#10b981', bizDomain: 'software-development' },
+  { id: 'tina',  emoji: '👩‍🔬', domain: 'QA Lead',       color: '#8b5cf6', bizDomain: 'software-development' },
+  { id: 'lara',  emoji: '👩‍💻', domain: 'Test Writing',  color: '#f59e0b', bizDomain: 'software-development' },
+  { id: 'dino',  emoji: '👨‍🔬', domain: 'Test Exec',     color: '#64748b', bizDomain: 'software-development' },
+  { id: 'gab',   emoji: '👨‍💻', domain: 'Code Review',   color: '#ef4444', bizDomain: 'software-development' },
+  { id: 'bea',   emoji: '👩‍💼', domain: 'Acceptance',    color: '#14b8a6', bizDomain: 'software-development' },
 ];
