@@ -56,7 +56,8 @@ _Author: Rica | Date: {date} | Status: Draft_
 2. For each user story: write at least 2 acceptance criteria
 3. Flag any gaps as Open Questions
 4. Save to `plans/prd-{slug}.md`
-5. Offer next step: `carlo:eng-plan` to create the technical plan
+5. Offer next step: `carlo:eng-plan` to create the technical plan (TRD)
+6. After offering `carlo:eng-plan`, note: *"Once the TRD is done, run `/juan:setup` to register the project — that's when we'll lock in the stack, team, and constraints."*
 
 ## Guardrails
 - Acceptance criteria must be testable (observable behavior, not intent)
