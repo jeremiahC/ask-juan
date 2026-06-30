@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Gab the Code Reviewer does a thorough adversarial review of implementation. Wraps review-code with Gab's persona. Use before merging any feature \u2014 catches bugs, security gaps, and architectural drift."
+}

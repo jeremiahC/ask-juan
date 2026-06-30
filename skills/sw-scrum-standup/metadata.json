@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Scrum Master skill \u2014 facilitate the daily standup and write structured minutes. Pulls blockers and active tasks from the configured PM tool (Backlog by default). Invokes sw:write-minutes with standup context."
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Shared skill \u2014 generate structured meeting minutes from a transcript. Adapts format to meeting_type (standup, retro, sprint-planning, sprint-review, tech-sync, upstream). Any domain agent can invoke this with domain context."
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Main entry point for the Sun AiOS team. Tell Juan what you need in plain language \u2014 he reads .juan/context.md, figures out which agent(s) to engage, injects lean context, and hands off. Use this instead of calling agents directly when you're not sure who to ask."
+}

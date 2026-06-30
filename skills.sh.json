@@ -1,0 +1,89 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Juan — Orchestrator",
+      "description": "Core routing and project setup. Start here.",
+      "skills": [
+        "juan-route",
+        "juan-setup",
+        "juan-status"
+      ]
+    },
+    {
+      "title": "Product Management",
+      "description": "Rica the PM — charters, PRDs, sprint timelines, and stakeholder meeting minutes.",
+      "skills": [
+        "rica-pm-charter",
+        "rica-pm-prd",
+        "rica-pm-timeline",
+        "sw-pm-write-minutes"
+      ]
+    },
+    {
+      "title": "Engineering",
+      "description": "Carlo the Lead Engineer — tech plans, architecture, security audits, and tech meeting minutes.",
+      "skills": [
+        "carlo-eng-plan",
+        "carlo-eng-review",
+        "carlo-eng-security",
+        "sw-lead-write-minutes"
+      ]
+    },
+    {
+      "title": "Scrum Ceremonies",
+      "description": "Scrum Master — standups, sprint planning, retros, and sprint reviews with live PM tool data.",
+      "skills": [
+        "sw-scrum-standup",
+        "sw-scrum-sprint-plan",
+        "sw-scrum-sprint-retro",
+        "sw-scrum-sprint-review"
+      ]
+    },
+    {
+      "title": "Design",
+      "description": "Mika the Designer — wireframes and pixel-precise design specs.",
+      "skills": [
+        "mika-design-ui",
+        "mika-design-specs"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "description": "Nico the Frontend Developer — UI components, pages, and frontend review.",
+      "skills": [
+        "nico-fe-build",
+        "nico-fe-review"
+      ]
+    },
+    {
+      "title": "Backend",
+      "description": "Rex the Backend Developer — API endpoints, business logic, and database design.",
+      "skills": [
+        "rex-be-build",
+        "rex-be-db"
+      ]
+    },
+    {
+      "title": "QA",
+      "description": "Tina, Lara, Dino, Gab, and Bea — full QA pipeline from strategy to acceptance.",
+      "skills": [
+        "tina-qa-plan",
+        "tina-qa-run",
+        "lara-tc-write",
+        "dino-test-run",
+        "gab-review-code",
+        "bea-qa-review"
+      ]
+    },
+    {
+      "title": "Shared Utilities",
+      "description": "Cross-domain skills callable by any agent.",
+      "skills": [
+        "sw-schedule-meeting",
+        "sw-write-minutes"
+      ]
+    }
+  ]
+}

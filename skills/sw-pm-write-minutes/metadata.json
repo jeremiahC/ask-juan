@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Rica's upstream meeting minutes skill \u2014 captures decisions, stakeholder asks, and action items from client calls, sponsor syncs, or cross-team meetings. Invokes sw:write-minutes with PM domain context."
+}

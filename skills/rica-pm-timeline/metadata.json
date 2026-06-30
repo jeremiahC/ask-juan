@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Rica the PM creates a sprint plan and timeline. Reads the PRD and .juan/context.md to break work into sprints with estimates. Use after the PRD is approved to plan delivery."
+}

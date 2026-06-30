@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Initialize a project for the Sun AiOS team. Reads or creates .juan/context.md at the project root, configures MCP tools (Backlog, Notion), and outputs a lean context summary the other agents can consume. Run this first in any new project."
+}

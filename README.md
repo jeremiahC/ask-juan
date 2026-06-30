@@ -33,27 +33,37 @@ Juan reads `.juan/context.md`, figures out which agent(s) to call, and dispatche
 
 - [Claude Code](https://claude.ai/code) — CLI or desktop app
 - A Claude account (Pro or above recommended)
+- Node.js 18+ (for `npx`)
 
 ## Setup
 
-### 1. Clone the repo
+### 1. Install skills
+
+Ask Juan uses [skills.sh](https://github.com/vercel-labs/skills) — the open agent skills CLI.
+
+**Install all skills globally (recommended):**
 
 ```bash
-git clone https://github.com/jeremiahC/ask-juan.git
-cd ask-juan
+npx skills add jeremiahC/ask-juan -g -a claude-code -y
 ```
 
-### 2. Copy skills to your Claude config
-
-Ask Juan's agents live as Claude Code skills in `~/.claude/skills/`. Copy the skills from this repo:
+**Install specific agents only:**
 
 ```bash
-cp -r .claude/skills/* ~/.claude/skills/
+# Just Juan + the full SW dev team
+npx skills add jeremiahC/ask-juan --skill juan-route --skill juan-setup -g -a claude-code
+
+# Just Scrum ceremonies
+npx skills add jeremiahC/ask-juan --skill sw-scrum-standup --skill sw-scrum-sprint-plan --skill sw-scrum-sprint-retro --skill sw-scrum-sprint-review -g -a claude-code
 ```
 
-> **Note:** If you already have skills in `~/.claude/skills/`, check for naming conflicts before copying.
+**Browse available skills first:**
 
-### 3. Initialize your project
+```bash
+npx skills add jeremiahC/ask-juan --list
+```
+
+### 2. Initialize your project
 
 Open Claude Code in your project directory and run:
 

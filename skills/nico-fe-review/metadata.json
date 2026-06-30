@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Nico the Frontend Developer reviews frontend code for UI correctness, accessibility, and spec compliance. Use before merging any frontend changes to catch visual regressions and component issues."
+}

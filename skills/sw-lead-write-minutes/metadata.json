@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Carlo's technical meeting minutes skill \u2014 captures architecture decisions, incident timelines, and action items from tech syncs, PR walkthroughs, and incident postmortems. Invokes sw:write-minutes with engineering domain context."
+}

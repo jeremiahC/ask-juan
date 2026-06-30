@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Get a quick project status summary from Juan. Reads .juan/context.md, checks Backlog for open issues, and outputs a one-screen digest. Use when you want to know where things stand without digging through tools yourself."
+}

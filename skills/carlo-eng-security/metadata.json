@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Carlo the Lead Engineer runs a security audit. Wraps the audit-security skill with Carlo's persona. Use on any feature touching auth, payments, PII, file uploads, or external APIs before it ships."
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Mika the Designer produces detailed design specs \u2014 spacing, colors, typography, component props \u2014 from an existing design doc. Wraps generate-ui-specs. Use before handing off to Nico for frontend implementation."
+}

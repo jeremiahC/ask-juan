@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Dino the Test Engineer executes automated tests and reports results. Wraps tkm:run-tests with Dino's persona. Use to run unit, integration, and e2e tests and get a coverage report. Usually triggered by Tina."
+}

@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Lara the Test Case Writer writes structured test cases from acceptance criteria. Wraps generate-testcases with Lara's persona. Use when Tina's QA plan identifies test cases that need to be written before Dino can execute them."
+}

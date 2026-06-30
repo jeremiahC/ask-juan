@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Bea the QA Reviewer performs manual acceptance testing. She verifies features meet user-facing acceptance criteria end-to-end, checking UI behavior, user flows, and edge cases that automated tests miss. Usually the final gate before Tina signs off."
+}

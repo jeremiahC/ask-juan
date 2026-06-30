@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Rica the PM drafts a project charter. Wraps the draft-project-charter skill with Rica's persona and lean context injection from .juan/context.md. Use at project kickoff to align stakeholders on scope, goals, and success criteria."
+}

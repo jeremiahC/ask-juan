@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "organization": "Ask Juan / Sun AiOS",
+  "date": "June 2026",
+  "abstract": "Rica the PM writes a Product Requirements Document. Reads .juan/context.md and any existing charter, then produces a structured PRD with user stories and acceptance criteria. Use after the charter is approved."
+}
