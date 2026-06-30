@@ -124,33 +124,44 @@ _Author: Rica | Sprint length: 2 weeks_
       },
     ],
     promptTrigger: '/sw:rica-pm-proposal-prep',
-    samplePrompt: `We're building a mobile inventory app for sari-sari store owners.
+    samplePrompt: `A client reached out after an intro call. They want to build
+a logistics management web app for their delivery fleet.
 
-Key constraints:
-- Android-only first, offline-first
-- Target users: non-technical store owners, 40-60 yrs old
-- Timeline: 8 weeks to launch
-- Budget: 2 devs full-time
+Key details from the call:
+- ~50 drivers, real-time GPS tracking needed
+- Integration with their existing ERP (SAP)
+- Timeline: want to go live in 6 months
+- Team rates: L1 Lead ¥700k/mo, J1 Dev ¥400k/mo, QA ¥300k/mo
 
-Can you write the PRD for the stock management epic?`,
-    sampleResponse: `Got it! Let me read the project context first, then I'll draft
-the PRD for Stock Management.
+Can you prepare a proposal for them?`,
+    sampleResponse: `On it! I'll generate the full proposal package for your
+logistics client.
 
-Reading .juan/context.md... ✓
+Generating Excel workbook... ✓
 
-# PRD — Stock Management Epic
-_Rica | Based on context: SME Inventory v1_
+📊 proposals/logistics-client-proposal-prep-2026-06-30.xlsx
 
-I'll structure this around 3 user stories that cover the core
-loop: log → alert → report. Each AC is written so Dino can
-automate it and Bea can verify it manually.
+Sheets created:
+  00_QA  — 8 questions for the client to fill in
+  01_WBS — 24 features across 4 phases (132 days total)
+  02_Team — L1 Lead + 2x J1 Dev + QA (rates loaded)
+  03_Cost — ¥18.2M estimated total
+  04_Stack — Next.js, Node.js, PostgreSQL, AWS
+  05_Summary — 5.2 MM over 6 months
+  06_Resource_Plan — Month-by-month allocation
+  Prices — Internal (do not share)
 
-Starting with US-01: Log restock...`,
+Share the 00_QA sheet with the client first.
+Once they return it, I'll update the full workbook.
+
+Ready to generate the pitch deck? Run /sw:rica-pm-proposal-draft`,
     skills: [
-      { icon: '📋', name: 'Project Charter',   desc: 'Kickoff doc aligning stakeholders on scope and goals.' },
-      { icon: '📝', name: 'PRD Writer',         desc: 'User stories and acceptance criteria from project context.' },
-      { icon: '📅', name: 'Sprint Planner',     desc: 'Breaks PRD epics into sprints with effort estimates.' },
-      { icon: '📖', name: 'Context Reader',     desc: 'Reads .juan/context.md — never guesses project details.' },
+      { icon: '📊', name: 'Proposal Prep',      desc: 'Excel workbook: WBS, cost, timeline, resource plan + client Q&A.' },
+      { icon: '🎯', name: 'Proposal Draft',      desc: '8-slide PPTX pitch deck derived from the prep Excel.' },
+      { icon: '📋', name: 'Project Charter',     desc: 'Kickoff doc aligning stakeholders on scope and goals.' },
+      { icon: '📝', name: 'PRD Writer',          desc: 'User stories and acceptance criteria from project context.' },
+      { icon: '📅', name: 'Sprint Planner',      desc: 'Breaks PRD epics into sprints with effort estimates.' },
+      { icon: '📖', name: 'Context Reader',      desc: 'Reads .juan/context.md — never guesses project details.' },
     ],
   },
 
