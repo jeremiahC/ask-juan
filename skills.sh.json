@@ -12,11 +12,19 @@
       ]
     },
     {
-      "title": "Product Management",
-      "description": "Rica the PM — upstream proposals, charters, PRDs, sprint timelines, and stakeholder meeting minutes.",
+      "title": "Sales",
+      "description": "Leo the Sales Specialist — lead qualification, client proposals (Excel + PPTX), and deal handoff to Rica.",
       "skills": [
-        "rica-pm-proposal-prep",
-        "rica-pm-proposal-draft",
+        "leo",
+        "leo-sales-qualify",
+        "leo-sales-proposal-prep",
+        "leo-sales-proposal-draft"
+      ]
+    },
+    {
+      "title": "Product Management",
+      "description": "Rica the PM — charters, PRDs, sprint timelines, and stakeholder meeting minutes.",
+      "skills": [
         "rica-pm-charter",
         "rica-pm-prd",
         "rica-pm-timeline",
@@ -25,8 +33,9 @@
     },
     {
       "title": "Engineering",
-      "description": "Carlo the Lead Engineer — tech plans, architecture, security audits, and tech meeting minutes.",
+      "description": "Carlo the Lead Engineer — pre-sales tech research, tech plans, architecture, security audits, and tech meeting minutes.",
       "skills": [
+        "carlo-lead-research",
         "carlo-eng-plan",
         "carlo-eng-review",
         "carlo-eng-security",
