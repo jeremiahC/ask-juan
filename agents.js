@@ -156,11 +156,11 @@ Once they return it, I'll update the full workbook.
 
 Ready to generate the pitch deck? Run /sw:rica-pm-proposal-draft`,
     skills: [
-      { icon: '📊', name: 'Proposal Prep',      desc: 'Excel workbook: WBS, cost, timeline, resource plan + client Q&A.' },
-      { icon: '🎯', name: 'Proposal Draft',      desc: '8-slide PPTX pitch deck derived from the prep Excel.' },
-      { icon: '📋', name: 'Project Charter',     desc: 'Kickoff doc aligning stakeholders on scope and goals.' },
-      { icon: '📝', name: 'PRD Writer',          desc: 'User stories and acceptance criteria from project context.' },
-      { icon: '📅', name: 'Sprint Planner',      desc: 'Breaks PRD epics into sprints with effort estimates.' },
+      { icon: '📊', name: 'Proposal Prep',      desc: 'Excel workbook: WBS, cost, timeline, resource plan + client Q&A.', cmd: '/sw:rica-pm-proposal-prep' },
+      { icon: '🎯', name: 'Proposal Draft',      desc: '8-slide PPTX pitch deck derived from the prep Excel.', cmd: '/sw:rica-pm-proposal-draft' },
+      { icon: '📋', name: 'Project Charter',     desc: 'Kickoff doc aligning stakeholders on scope and goals.', cmd: '/sw:rica-pm-charter' },
+      { icon: '📝', name: 'PRD Writer',          desc: 'User stories and acceptance criteria from project context.', cmd: '/sw:rica-pm-prd' },
+      { icon: '📅', name: 'Sprint Planner',      desc: 'Breaks PRD epics into sprints with effort estimates.', cmd: '/sw:rica-pm-timeline' },
       { icon: '📖', name: 'Context Reader',      desc: 'Reads .juan/context.md — never guesses project details.' },
     ],
   },

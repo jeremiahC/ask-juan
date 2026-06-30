@@ -326,6 +326,7 @@ function renderSkillsTab(agent) {
       <div class="adp-skill-icon">${s.icon}</div>
       <div class="adp-skill-name">${s.name}</div>
       <div class="adp-skill-desc">${s.desc}</div>
+      ${s.cmd ? `<div class="adp-skill-cmd" title="Click to copy" onclick="navigator.clipboard.writeText('${s.cmd}').then(()=>{this.classList.add('copied');setTimeout(()=>this.classList.remove('copied'),1200)})">${s.cmd}</div>` : ''}
     </div>`).join('');
 
   return `

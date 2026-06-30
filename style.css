@@ -1649,3 +1649,19 @@ body {
 }
 
 .adp-skill-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.55; }
+
+.adp-skill-cmd {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px 10px;
+  background: #f0f0f0;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  user-select: none;
+}
+.adp-skill-cmd:hover { background: #e0e0e0; color: #222; }
+.adp-skill-cmd.copied { background: #d1fae5; color: #065f46; }
